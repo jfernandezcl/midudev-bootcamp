@@ -3,72 +3,32 @@ body{
   margin: 0;
 }
 
-.contenedor{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
 
-.contenedor-mensajes {
-  grid-column: 1;
-  grid-row: 3;
-  justify-self: center;
-  align-self: center;
-  
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.mensaje {
-  background-color: aqua;
-  font-weight: bold;
-}
-
-.mensaje {
-  grid-column: 1;
-  grid-row: 3;
-  justify-self: center;
-}
-
-.titulo{
-  background-color: aquamarine;
-  border-radius: 32px;
-  grid-column: 1;
-  justify-self: center;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.contador{
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: center;
-  background-color: rgb(224, 101, 101);
-  border-radius: 10px 100px / 120px 100px;
-}
-
-.button-container {
-  grid-column: 2;
-  grid-row: 1;
-  width: 25%;
-  height: 30%;
-  align-self: center;
-}
-
-.button {
-  min-width: 96px;
+.title{
   background-color: black;
-  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 24px;
+}
+
+
+.container-button{
+  background-color: gray;
+  color: rgb(131, 235, 12);
+  padding: 32px;
+  border-radius: 24px;
+}
+.button{
   padding: 8px;
-  font-weight: bold;
+  background-color: black;
   color: white;
 }
 
-.button:hover {
-  background-color: rgba(0, 0, 0, 0.89);
-}
 
-.button-reset-container {
-  grid-column: 2;
-  grid-row: 2;
-  width: 25%;
-  height: 30%;
-  align-self: center;
-}
