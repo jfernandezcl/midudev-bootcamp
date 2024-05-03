@@ -1,3 +1,3 @@
 # BOOTCAMP
 
-Repositorio dedicado a bootcamp midu
+Repositorio dedicado a bootcamp midudev
