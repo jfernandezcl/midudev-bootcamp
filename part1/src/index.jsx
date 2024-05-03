@@ -1,42 +1,41 @@
 import ReactDOM from "react-dom/client";
-import { useState } from "react";
 import './index.css'
 
-
-const App = () => {
-  const [counters, setCounters] = useState ({
-    left: 0,
-    right: 0,
-    clicks: 0
-  })
-  const handleClickLeft = () => {
-    const newCountersState = {
-      ...counters,
-      left: counters.left + 1,
-      clicks: counters.clicks + 1,
-    }
-    setCounters(newCountersState);
+const notes = [
+  {
+    id: 1,
+    content: 'HTML is easy',
+    important: true
+  },
+  {
+    id: 2,
+    content: 'Browser can execute only JavaScript',
+    important: false
+  },
+  {
+    id: 3,
+    content: 'GET and POST are the most important methods of HTTP protocol',
+    important: true
   }
-  const handleClickRight = () => {
-    setCounters ({
-      ...counters,
-      right: counters.right + 1,
-      clicks: counters.clicks + 1
-    });
-  };
+]
+
+export default function App() {
   return (
-    <div className="container">
-      <p className="title">Contador de clicks</p>
-      <div className="container-button">
-      {counters.left}
-      <button className="button" onClick={handleClickLeft}>Left</button>
-      <button className="button" onClick={handleClickRight}>Right</button>
-      {counters.right}
+    <div>
+      {notes.map(note => (
+        <div hey={note.id}>
+          <p>{note.content}</p>
       </div>
-      <p className="title">Clicks totales: {counters.clicks}</p>
+      ))}
     </div>
   )
 }
+
+
+
+
+
+
 
   ReactDOM.createRoot(document.getElementById('root')).render(  
     <App  />
